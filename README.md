@@ -16,6 +16,6 @@ Note that for copyright reasons below you can find only "dummy" samples of my co
 
 ## React & TypeScript
 
-1. <a href="/react-ts/text-scramble.js">React text scramble</a>
+1. <a href="/react-ts/textScramble.js">React text scramble</a>
 
 <!-- 1. <a href="/"></a> -->
