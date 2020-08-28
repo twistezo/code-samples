@@ -96,6 +96,7 @@ fn generate_temp_foos(
 
     for foo in bar.foos_iter() {
         let foo_curve = bar.curve_by_id(foo.curve);
+
         for node in foo_curve.nodes().iter() {
             try_generate_foo_in_point(
                 bar,
@@ -105,7 +106,6 @@ fn generate_temp_foos(
             );
         }
     }
-
     temp_foos
 }
 

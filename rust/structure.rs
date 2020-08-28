@@ -94,9 +94,11 @@ impl FoosManager {
 
     pub fn add(&mut self, foo: Foo) -> Result<&Foo> {
         debug!("Adding foo {:?}", foo.id);
+
         if self.foos_map.contains_key(&foo.id) {
             bail!(ErrorKind::FooIdAlreadyInUse(foo.id));
         }
+
         self.recently_added.push(foo.id);
         self.foos_map.insert(foo.id, self.foos.len());
         self.foos.push(foo);
@@ -109,16 +111,20 @@ impl FoosManager {
             .foos_map
             .get(&foo_id)
             .ok_or_else(|| Error::from(ErrorKind::FooNotFound(foo_id)))?;
+
         self.foos.swap_remove(index);
         self.foos_map
             .remove(&foo_id)
             .expect("Internal qux error: FoosManager is corrupted.\n");
+
         if index < self.foos_map.len() {
             let new_id_at_index = self.foos[index].id;
+
             self.foos_map
                 .insert(new_id_at_index, index)
                 .expect("Internal qux error: FoosManager is corrupted.\n");
         }
+
         self.recently_removed.push(foo_id);
         Ok(())
     }
