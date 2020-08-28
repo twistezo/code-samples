@@ -22,7 +22,6 @@ class TextScramble {
     const el = document.querySelector('.' + this._domClass)
     let currentTextIndex = 0
 
-    // eslint-disable-next-line no-constant-condition
     while (true) {
       let text = this._nextArrayElementInLoop(this._sentences, currentTextIndex)
       currentTextIndex = this._sentences.indexOf(text)

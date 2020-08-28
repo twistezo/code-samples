@@ -75,7 +75,7 @@ const TextScramble: React.FC<TextScrambleProps> = ({
     if (!paused) bakeText()
   }, [currentText, paused])
 
-  return <div>{displayedText}</div>
+  return <>{displayedText}</>
 }
 
 export default TextScramble
