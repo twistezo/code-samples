@@ -1,4 +1,4 @@
-export const Notifier: React.FC<NotifierProps> = ({
+const Notifier: React.FC<NotifierProps> = ({
   id,
   type,
   text,

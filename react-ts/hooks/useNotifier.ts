@@ -1,8 +1,3 @@
-import { useState } from 'react'
-import { v4 as uuidv4 } from 'uuid'
-import { NotifierType, Notification } from 'components/Notifier'
-import { UseNotifierProps } from './types'
-
 const useNotifier = (): UseNotifierProps => {
   const [notifications, setNotifications] = useState<Notification[]>([])
 
