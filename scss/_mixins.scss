@@ -1,0 +1,22 @@
+@mixin box-shadow($color, $alpha: 0.8) {
+  box-shadow: 0px 10px 25px rgba($color, $alpha);
+}
+
+@mixin transition-all-ease-in-out($properties) {
+  transition: all 0.1s ease-in-out;
+  transition-property: #{$properties};
+}
+
+@mixin fade-in-animation() {
+  animation: fadeIn 0.5s ease-in;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+}

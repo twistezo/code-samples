@@ -16,6 +16,12 @@ Note that for copyright reasons below you can find only "dummy" samples of my co
 
 ## React & TypeScript
 
-1. <a href="/react-ts/TextScramble/">React text scramble</a>
+1. <a href="/react-ts/components/">Components</a>
+2. <a href="/react-ts/contexts">Contexts</a>
+3. <a href="/react-ts/hooks/">Hooks</a>
+4. <a href="/react-ts/routes.ts">Routes</a>
+5. <a href="/react-ts/utils.ts">Utils</a>
 
-<!-- 1. <a href="/"></a> -->
+## Styles
+
+1. <a href="/scss/">SCSS</a>

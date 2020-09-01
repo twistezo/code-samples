@@ -1,0 +1,111 @@
+@import 'styles/colors';
+@import 'styles/mixins';
+
+.Input {
+  $input-width: 340px;
+
+  width: $input-width;
+  font-family: 'Open Sans';
+  color: $color-black;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+
+  &--container {
+    position: relative;
+    width: $input-width;
+  }
+
+  &--extra-height {
+    min-height: 67px;
+  }
+
+  &__label {
+    @include transition-all-ease-in-out('transform, font-size');
+    height: 17px;
+    position: relative;
+    top: 33px;
+    left: 16px;
+    color: $color-gray;
+    cursor: text;
+    padding: 0;
+
+    &--error {
+      color: $color-red;
+    }
+
+    &--disabled {
+      cursor: not-allowed;
+    }
+
+    &--nested {
+      font-size: 12px;
+      max-width: fit-content;
+      background-color: $color-white;
+      padding: 0 4px;
+      left: 9px;
+      transform: translateY(-25.5px);
+      border-radius: 3px 3px 0 0;
+
+      &-focused {
+        color: $color-navy-blue;
+      }
+    }
+  }
+
+  &__field {
+    @include transition-all-ease-in-out('border');
+    font-family: 'Open Sans';
+    color: $color-black;
+    caret-color: $color-black;
+    font-size: 14px;
+    min-height: 46px;
+    border-radius: 6px;
+    border: solid 1px $color-gray;
+    padding-left: 13px;
+
+    &:focus,
+    &:hover {
+      outline: none;
+      border: solid 1px $color-navy-blue;
+    }
+
+    &--error {
+      border: solid 1px $color-red;
+    }
+
+    &--disabled {
+      background-color: $color-gray-light;
+      cursor: not-allowed;
+
+      &:focus,
+      &:hover {
+        border: solid 1px $color-gray;
+      }
+    }
+
+    &::placeholder {
+      color: $color-gray;
+    }
+
+    &:-webkit-autofill {
+      animation-name: onAutoFillStart;
+      -webkit-text-fill-color: $color-black;
+      -webkit-box-shadow: 0 0 0px 1000px $color-white inset;
+    }
+
+    // hide arrows from  input type `number`
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    &[type='number'] {
+      -moz-appearance: textfield;
+    }
+  }
+}
+
+@keyframes onAutoFillStart {
+}

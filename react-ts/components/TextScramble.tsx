@@ -1,7 +1,3 @@
-import React, { useState, useEffect } from 'react'
-import { TextScrambleProps } from './types'
-import { randomItem, nextItem } from 'utils/array'
-
 const symbols: string[] = '!<>-_\\/[]{}—=+*^?#'.split('')
 
 const TextScramble: React.FC<TextScrambleProps> = ({

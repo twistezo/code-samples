@@ -1,0 +1,76 @@
+@import 'styles/colors';
+@import 'styles/mixins';
+
+.Notifier {
+  @include fade-in-animation();
+
+  display: flex;
+  align-items: center;
+  min-height: 75px;
+  width: 400px;
+  padding: 15px 0;
+  margin-bottom: 25px;
+  border-left: 3px solid;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  box-shadow: 0 0 30px 0 $color-gray;
+  background: $color-white;
+  white-space: pre-line;
+  cursor: pointer;
+
+  &--success {
+    border-color: $color-green;
+  }
+  &--warning {
+    border-color: $color-blue;
+  }
+  &--error {
+    border-color: $color-red;
+  }
+
+  &__icon {
+    width: 35px;
+    height: 35px;
+    margin-left: 21px;
+    border-radius: 7px;
+
+    svg {
+      width: 16px !important;
+      height: 16px;
+      padding: 10px;
+    }
+
+    &--success {
+      background-color: $color-green-light;
+      color: $color-green;
+    }
+    &--warning {
+      background-color: $color-blue-light;
+      color: $color-blue;
+    }
+    &--error {
+      background-color: $color-red-border;
+      color: $color-red;
+    }
+  }
+
+  &__text {
+    padding-left: 23px;
+
+    &--row {
+      padding: 2px 0;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    rotate: 0;
+  }
+
+  100% {
+    opacity: 1;
+    rotate: 180;
+  }
+}

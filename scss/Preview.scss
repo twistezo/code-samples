@@ -1,0 +1,26 @@
+@import 'styles/colors';
+
+.Preview {
+  &__thumbnail {
+    object-fit: contain;
+    max-height: inherit;
+    max-width: inherit;
+
+    &--hidden {
+      display: none;
+    }
+
+    &--empty {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+    }
+
+    img,
+    video {
+      max-height: inherit;
+      max-width: inherit;
+    }
+  }
+}

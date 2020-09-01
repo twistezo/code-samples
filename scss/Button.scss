@@ -1,0 +1,73 @@
+@import 'styles/colors';
+@import 'styles/mixins';
+
+.Button {
+  @include transition-all-ease-in-out('background-color, box-shadow');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  color: $color-white;
+  font-family: 'Open Sans';
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $color-gray;
+
+    &:hover,
+    &:focus {
+      background-color: $color-gray;
+      box-shadow: none;
+    }
+  }
+
+  &__icon {
+    font-size: 15px;
+
+    &--margin {
+      margin-right: 8px;
+    }
+  }
+
+  &--standard {
+    min-width: 135px;
+    height: 40px;
+    padding: 0 35px;
+    font-size: 14px;
+  }
+
+  &--small {
+    min-width: 102px;
+    height: 32px;
+    padding: 0 24px;
+    font-weight: 600;
+    font-size: 12px;
+  }
+
+  &--blue {
+    background-color: $color-blue;
+
+    &:hover {
+      @include box-shadow($color-blue);
+    }
+  }
+
+  &--red {
+    background-color: rgba($color-red, 0.2);
+    color: $color-red;
+
+    &:hover {
+      @include box-shadow($color-red, 0.2);
+    }
+  }
+}
