@@ -21,6 +21,7 @@ Note that for copyright reasons below you can find only "dummy" samples of my co
 3. <a href="/react-ts/hooks/">Hooks</a>
 4. <a href="/react-ts/routes.ts">Routes</a>
 5. <a href="/react-ts/utils.ts">Utils</a>
+6. <a href="https://github.com/twistezo/advent-of-code-2021">Advent Of Code 2021</a>
 
 ## Styles
 
